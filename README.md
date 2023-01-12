@@ -1,6 +1,6 @@
 <div align="center">
 
-# TWEETER
+# TWITTER
 
 A Social Media App
 
