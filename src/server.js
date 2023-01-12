@@ -203,7 +203,7 @@ export function makeServer({ environment = "development" } = {}) {
 
       // user routes (public)
       this.get("/users", getAllUsersHandler.bind(this));
-      this.get("/users/id/:userId", getUserHandler.bind(this));
+      this.get("/users/:userId", getUserHandler.bind(this));
       this.get("/users/handler/:userHandler", getUserByUserHandler.bind(this));
 
       // user routes (private)
