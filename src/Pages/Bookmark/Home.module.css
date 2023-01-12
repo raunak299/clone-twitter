@@ -1,0 +1,26 @@
+.home-page{
+    width:100%;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+}
+
+.new-tweet-container{
+    border: solid var(--main-border-color);
+    padding:1.2rem;
+    display: none;
+}
+
+@media(min-width:700px){
+   .home-page{
+    width:70%;
+    max-width: 600px;
+    padding-top:3rem;
+    padding-bottom: 3rem;
+   } 
+   .new-tweet-container{
+    border: solid var(--main-border-color);
+    padding:1.2rem;
+    display: block;
+  
+}
+}

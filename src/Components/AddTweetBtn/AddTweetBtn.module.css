@@ -1,0 +1,14 @@
+.icon-container{
+    border-radius: 30px;
+    display:flex;
+    padding:.5rem;
+    margin-top:1.8rem;
+    justify-content: center;
+    align-items: center;
+    background:var(--main-theme-color);
+}
+
+
+/* .icon-container:hover{
+    background: var(--main-theme-color);;
+} */

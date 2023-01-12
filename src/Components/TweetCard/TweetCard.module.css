@@ -1,0 +1,124 @@
+/* a{
+    text-decoration: none!important;;
+    display: block;
+} */
+
+.tweet-component{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    border: solid var(--main-border-color);
+    padding:1.2rem;
+    text-decoration: none!important;;
+}
+
+.tweet-user-details{
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width:100%;
+    margin-bottom: .5rem;
+}
+
+
+
+.user-pic{
+    width:3.5rem;
+    height:3.5rem;
+    border-radius: 50%;
+    background:var(--main-border-color);
+}
+
+.user-name-date{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left:.7rem;
+}
+
+.user-name-date div:nth-child(1){
+    font-weight: bold;
+    font-size:1.2rem;
+}
+
+.tweet-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+
+
+.tweet-content div{
+    padding-bottom: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.tweet-content img{
+    width:100%;
+    height:12rem;
+    border-radius: 10px;
+    
+}
+
+.tweet-action-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    color:grey
+}
+
+.tweet-action-container div:nth-child(1):hover{
+    color:rgb(207, 18, 50);
+}
+
+.tweet-action-container a .tweet-action-item-cont:hover{
+    color:var(--main-theme-color);
+}
+
+.tweet-action-container div:nth-child(3):hover{
+    color:rgb(18, 164, 18);
+}
+
+.likedByLogInUser{
+    color:red;
+}
+
+.postBookmarked{
+    color:rgb(18, 164, 18);
+}
+
+.tweet-action-item-cont {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tweet-action-item-cont div{
+    padding-left:.5rem;
+    font-size:1.2rem;
+}
+
+
+
+@media(min-width:500px){
+    .tweet-content img{
+        height:20rem;
+    } 
+}
+
+@media(min-width:700px){
+    .tweet-content img{
+        width:100%;
+        height:40vh;
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,40 @@
+.footer-small {
+    display:flex;
+    justify-content: space-between;
+    padding: .5rem 2rem;
+    align-items: center;
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    /* border-top-style:solid;
+    border-top-color: var(--main-border-color); */
+    background: var(--main-background-color);
+ }
+ 
+ .footer-small svg {
+     width: 2rem;
+     height:2rem;
+     color:var(--main-icon-color);
+ }
+
+ .icon-container{
+    border-radius: 30px;
+    display:flex;
+    padding:.5rem;
+    /* margin-top:1.8rem; */
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-container:hover{
+    background: var(--secondary-background-color);
+}
+
+ 
+@media(min-width:700px){
+
+    .footer-small{
+     display: none;
+     background: var(--main-background-color);
+    }}

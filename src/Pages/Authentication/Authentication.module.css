@@ -1,0 +1,143 @@
+.auth-page{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding:1rem;
+    min-height: 100vh;
+    background: var(--main-background-color); 
+}
+.auth-page svg{
+   color:var(--main-theme-color);
+   width: 2rem;
+   height:2rem;
+}
+.auth-sec{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin-top:25vh;
+}
+
+.auth-sec h1{
+    color: var(--main-text-color);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.input-sec {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width:100%;
+}
+.auth-sec input{
+   padding:.5rem;
+   border-radius: 7px;
+   color:var(--main-text-color);
+   background:var(--main-background-color);
+    font-size: 1.2rem;
+   margin-top:1rem;
+   width:100%;
+}
+
+.auth-sec input:focus{
+    outline:none;
+    border-color:var(--main-theme-color);
+}
+
+.valid{
+    border: solid var(--main-border-color);
+}
+.invalid{
+    border: solid red;
+    width:100%;
+}
+
+.test-user{
+    width:100%;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;;
+    background:var(--third-background-color);
+    border: solid var(--main-border-color);
+    color:var(--main-background-color);
+    padding:.5rem;
+    text-align: center;
+    margin-top:1rem;
+}
+
+.auth-sec button{
+
+    width:100%;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;;
+    color:var(--main-background-color);
+    padding:.5rem;
+    margin-top:1rem;
+}
+
+.enabled{
+    background: var(--third-background-color); ;
+}
+.disabled{
+  pointer-events: none;
+  background: grey;
+}
+
+.error-sec{
+    color:red;
+}
+
+.login-toggle{
+    color:var(--main-text-color);
+    padding:1rem;
+}
+
+.login-toggle span{
+    color:var(--main-theme-color);
+    font-weight: bold;
+}
+
+
+@media(min-width:700px){
+   
+    
+    .auth-page svg{
+        width: 3em;
+        height:3rem;
+     }
+ 
+    .auth-sec{
+        width: 40% ;
+        margin-top: 17vh;
+    }
+
+    .auth-sec h1{
+        font-size: 2.8rem;
+    } 
+
+    .auth-sec input{
+        font-size: 1.5rem;
+        padding:1rem;
+        margin-top: 1.5rem;
+    }
+    .auth-sec button{
+        font-size: 1.5rem;
+        padding:.7rem;
+        margin-top:1.5rem;
+    }
+
+    .test-user{
+        font-size: 1.5rem;
+        /* padding:.7rem; */
+        margin-top:1.5rem;
+    }
+
+    .login-toggle{
+        font-size: 1.2rem;}
+}

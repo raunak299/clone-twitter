@@ -103,13 +103,9 @@ export const createPostHandler = function (schema, request) {
   }
 };
 
-/**
- * This handler handles updating a post in the db.
- * send POST Request at /api/posts/edit/:postId
- * body contains { postData }
- * */
 export const editPostHandler = function (schema, request) {
   const user = requiresAuth.call(this, request);
+
   try {
     if (!user) {
       return new Response(
@@ -125,16 +121,8 @@ export const editPostHandler = function (schema, request) {
     const postId = request.params.postId;
     const { postData } = JSON.parse(request.requestBody);
     let post = schema.posts.findBy({ _id: postId }).attrs;
-    if (post.username !== user.username) {
-      return new Response(
-        400,
-        {},
-        {
-          errors: ["Cannot edit a Post doesn't belong to the logged in User."],
-        }
-      );
-    }
     post = { ...post, ...postData };
+
     this.db.posts.update({ _id: postId }, post);
     return new Response(201, {}, { posts: this.db.posts });
   } catch (error) {

@@ -1,0 +1,225 @@
+
+
+.tweet-details-page{
+    width:100%;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+
+}
+
+.loading{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    padding-top:30vh;
+   
+}
+
+.tweet-component{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    border: solid var(--main-border-color);
+    padding:1.2rem;
+}
+
+.edit-tweet-modal{
+  border: solid var(--main-border-color);
+  padding: 1rem;
+}
+
+
+.tweet-user-details{
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width:100%;
+    margin-bottom: .8rem;
+}
+
+.tweet-user-details div:nth-child(1){
+    width:100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.post-action-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.post-action-btn-container{
+  border: solid var(--main-theme-color);
+  /* padding:.3rem 1rem ; */
+  margin:.5rem 0;
+  border-radius:5px;
+  font-weight: bold;
+}
+
+
+.post-action-btn-container button{
+    width:100%;
+    background: var(--main-background-color);
+    color:var(--main-text-color);
+    padding:.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border:none;
+    border:solid var(--main-border-color);
+}
+
+.post-action-btn-container svg{
+    margin-bottom:.2rem;
+}
+
+
+
+.user-pic{
+    width:3.5rem;
+    height:3.5rem;
+    background-color: var(--main-border-color);
+    border-radius: 50%;
+}
+
+.user-name-date{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left:.7rem;
+}
+
+.user-name-date div:nth-child(1){
+    font-weight: bold;
+    font-size:1.2rem;
+}
+
+.tweet-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding-top: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.tweet-content div{
+    padding-bottom: 1.2rem;
+    font-size: 1.2rem;
+}
+
+.tweet-content img{
+    width:100%;
+    height:12rem;
+    border-radius: 10px;
+}
+
+.tweet-action-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    color:grey;
+    padding-bottom:1rem;
+}
+
+.tweet-action-container .tweet-action-item-cont:nth-child(1):hover{
+    color:rgb(207, 18, 50);
+}
+
+.tweet-action-container .tweet-action-item-cont:nth-child(2):hover{
+    color:var(--main-theme-color);
+}
+
+.tweet-action-container .tweet-action-item-cont:nth-child(3):hover{
+    color:rgb(18, 164, 18);
+}
+
+.likedByLogInUser{
+    color:red;
+}
+
+.postBookmarked{
+    color:rgb(18, 164, 18);
+}
+
+.tweet-action-item-cont {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tweet-action-item-cont div{
+    padding-left:.5rem;
+    font-size:1.2rem;
+}
+
+
+.add-comment-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    padding-bottom:1rem;
+}
+
+.add-comment-container input {
+    width:100%;
+    font-size:1.2rem;
+    background: var(--main-background-color);
+    border:none;
+    outline: none;
+    color: var(--main-text-color);
+    border:solid var(--main-border-color);
+    padding:.5rem;
+    border-radius:5px;
+    margin-right:.5rem;
+}
+
+.add-comment-container button{
+    border-radius: 13px;
+    font-weight: bold;
+    color:whitesmoke;
+    background: var(--main-theme-color);
+    padding:.5rem 1rem;
+    border:none;
+}
+
+
+.comment-container{
+    width:100%;
+    padding-top:1.2rem;
+    border-top: solid var(--main-border-color)
+}
+
+
+
+@media(min-width:500px){
+    .tweet-content img{
+        height:20rem;
+    } 
+}
+
+@media(min-width:700px){
+    .tweet-content img{
+        width:100%;
+        height:40vh;
+        border-radius: 10px;
+    }
+
+    .tweet-details-page{
+     width:70%;
+     max-width: 600px;
+     padding-top:3rem;
+     padding-bottom: 3rem;
+    } 
+ 
+}

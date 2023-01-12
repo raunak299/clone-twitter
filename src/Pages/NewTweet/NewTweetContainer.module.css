@@ -1,0 +1,171 @@
+.new-tweet-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width:100%;
+}
+
+.profile-pic{
+    width:3rem;
+    height:3rem;
+    border-radius: 50%;
+    margin:0 1rem 0 0;
+    background:var(--main-border-color);
+}
+
+
+
+.tweet-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:flex-start;
+    width:75%;
+}
+
+
+.tweet-container textarea{
+  
+    width:100%;
+    font-size:1rem;
+    color:var(--main-text-color);
+    background: var(--main-background-color);
+    border:none;
+    outline:none;
+    margin-bottom:1rem;
+    resize:none;
+    min-height:12rem;
+    padding:.5rem;
+}
+
+.tweet-img{
+    position:relative;
+}
+
+.tweet-img svg{
+    color:var(--main-text-color);
+    position: absolute;
+    top:0;
+    left:0;
+}
+.tweet-img img{
+    width: 65%;
+    height:65%;
+    margin:1rem;
+    border-radius: 20px;
+}
+
+
+
+.tweet-feature-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width:100%;
+    padding-top:1rem;
+    border-top-style: solid;
+    border-top-color: var(--main-border-color);
+    position: relative;
+}
+
+
+.tweet-feature-container div{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* width:30%; */
+}
+
+
+
+.tweet-feature-container div svg{
+    color:var(--main-theme-color);
+}
+
+.img-uploader {
+    position:relative;
+    margin-right:3rem;
+}
+.img-uploader svg{
+    position:absolute;
+    pointer-events: none;
+    width:1.5rem;
+    height:1.5rem;
+}
+.img-uploader input{
+   opacity: 0; 
+   width:1.5rem;
+   height:1.5rem;
+   margin:0px;
+   padding:0px;
+   position:absolute;
+}
+
+
+
+.tweet-btn{
+    border-radius: 50px;
+    font-weight: bold;
+    color:var(--main-text-color);
+    background: var(--main-theme-color);
+    padding:.5rem 1rem;
+    border: solid var(--main-theme-color);
+
+}
+
+
+.cancel-btn{
+    border-radius: 50px;
+    font-weight: bold;
+    color:var(--main-icon-color);
+    background-color: var(--main-background-color);
+    border: solid var(--main-theme-color);
+    padding:.5rem 1rem;
+    margin-left:.5rem;
+}
+
+@media(min-width:700px){
+    .new-tweet-page{
+        padding:5rem;
+    }
+    .profile-pic{
+        width:4rem;
+        height:4rem;
+        border-radius: 50%;
+        margin:0 1rem 0 0;
+    }
+
+.tweet-container textarea{
+    font-size:2rem;
+  }
+
+  .tweet-feature-container div svg{
+    width:2rem;
+    height:2rem;
+}
+
+.tweet-btn{
+    border-radius: 20px;
+    font-weight: bold;
+    color:whitesmoke;
+    font-size:1.5rem;
+    background: var(--main-theme-color);
+    padding:.5rem 1rem;
+    border: solid var(--main-theme-color);
+
+}
+
+.btn-container button:nth-child(2){
+    border-radius: 20px;
+    font-weight: bold;
+    color:whitesmoke;
+    font-size:1.5rem;
+    background-color: var(--main-background-color);
+    border: solid var(--main-theme-color);
+    padding:.5rem 1rem;
+}
+
+
+}

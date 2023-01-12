@@ -1,42 +1,86 @@
 import "./App.css";
-import logo from "./logo.png";
+// import Button from '@mui/material/Button';
+import { Route, Routes, Navigate } from "react-router-dom";
+import Home from "./Pages/Home/Home";
+import NewTweet from "./Pages/NewTweet/NewTweet";
+import Authentication from "./Pages/Authentication/Authentication";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import Profile from "./Pages/Profile/Profile";
+import TweetDetail from "./Pages/TweetDetail/TweetDetail";
+import Bookmark from "./Pages/Bookmark/Bookmark";
+import SearchUser from "./Pages/SeachUser/SearchUser";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+    if (theme) {
+      document.body.className = theme;
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="mockBee logo" width="180" height="180" />
-        <h1 className="brand-title">
-          Welcome to <span>mockBee!</span>
-        </h1>
-        <p className="brand-description">
-          Get started by editing <code>src/App.js</code>
-        </p>
-        <div className="links">
-          <a
-            href="https://mockbee.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore mockBee
-          </a>
-          <a
-            href="https://mockbee.netlify.app/docs/api/introduction"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Documentation
-          </a>
-          <a
-            href="https://github.com/neogcamp/mockBee"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contribute
-          </a>
-        </div>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Navigate to="/home" />} />
+
+      <Route
+        path="/home"
+        element={
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/tweet/:tweetId"
+        element={
+          <PrivateRoute>
+            <TweetDetail />
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/new-tweet"
+        element={
+          <PrivateRoute>
+            <NewTweet />
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/bookmarks"
+        element={
+          <PrivateRoute>
+            <Bookmark />
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path="/search"
+        element={
+          <PrivateRoute>
+            <SearchUser />
+          </PrivateRoute>
+        }
+      />
+
+      <Route path="/authentication" element={<Authentication />} />
+
+      <Route
+        path="/profile/:userId"
+        element={
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        }
+      />
+
+      <Route path="*" element={<Navigate to="/home" />} />
+    </Routes>
   );
 }
 
