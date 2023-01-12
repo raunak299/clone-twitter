@@ -7,7 +7,7 @@ import Authentication from "./Pages/Authentication/Authentication";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import Profile from "./Pages/Profile/Profile";
 import TweetDetail from "./Pages/TweetDetail/TweetDetail";
-import Bookmark from "./Pages/Bookmark/Bookmark";
+// import Bookmark from "./Pages/Bookmark/Bookmark";
 import SearchUser from "./Pages/SeachUser/SearchUser";
 import { useEffect } from "react";
 
@@ -50,14 +50,14 @@ function App() {
         }
       />
 
-      <Route
+      {/* <Route
         path="/bookmarks"
         element={
           <PrivateRoute>
             <Bookmark />
           </PrivateRoute>
         }
-      />
+      /> */}
 
       <Route
         path="/search"

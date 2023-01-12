@@ -72,9 +72,13 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-    width: 75%;
+    width: 70%;
     color:grey
 }
+
+/* .tweet-action-container div {
+    padding-left:2rem;
+} */
 
 .tweet-action-container div:nth-child(1):hover{
     color:rgb(207, 18, 50);

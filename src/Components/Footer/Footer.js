@@ -1,7 +1,7 @@
 import styles from "./Footer.module.css";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
-import TurnedInNotIcon from "@mui/icons-material/TurnedInNot";
+// import TurnedInNotIcon from "@mui/icons-material/TurnedInNot";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -23,15 +23,6 @@ const Footer = () => {
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
             <SearchIcon />
-          </Link>
-        </div>
-
-        <div className={styles["icon-container"]}>
-          <Link
-            to="/bookmarks"
-            style={{ color: "inherit", textDecoration: "inherit" }}
-          >
-            <TurnedInNotIcon />
           </Link>
         </div>
       </div>

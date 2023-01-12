@@ -1,11 +1,11 @@
 import styles from "./TweetCard.module.css";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
-import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
+// import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import useFetch from "../../custom-hooks/fetch-hook";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { addToBookmark, removeFromBookmark } from "../../Store/BookmarkAction";
+// import { addToBookmark, removeFromBookmark } from "../../Store/BookmarkAction";
 import { likeTweetHandler } from "../../Store/PostAction";
 import { useEffect, useState } from "react";
 
@@ -14,9 +14,9 @@ function TweetCard(props) {
   const { sendRequest } = useFetch();
   const dispatch = useDispatch();
   const userId = localStorage.getItem("userId");
-  const bookmarkData = useSelector(
-    (state) => state.BookmarkSliceReducer.bookmarkData
-  );
+  // const bookmarkData = useSelector(
+  //   (state) => state.BookmarkSliceReducer.bookmarkData
+  // );
 
   const likedByList = postData?.likes?.likedBy;
   let likedByLogInUser = likedByList.find((item) => item["_id"] === userId);
@@ -28,16 +28,17 @@ function TweetCard(props) {
     dispatch(likeTweetHandler(sendRequest, url));
   };
 
-  const isPostBookmarked = bookmarkData.find(
-    (item) => item["_id"] === postData["_id"]
-  );
-  const bookmarkHandler = async () => {
-    if (!isPostBookmarked) {
-      dispatch(addToBookmark(sendRequest, postData));
-    } else {
-      dispatch(removeFromBookmark(sendRequest, postData));
-    }
-  };
+  // const isPostBookmarked = bookmarkData.find(
+  //   (item) => item["_id"] === postData["_id"]
+  // );
+
+  // const bookmarkHandler = async () => {
+  //   if (!isPostBookmarked) {
+  //     dispatch(addToBookmark(sendRequest, postData));
+  //   } else {
+  //     dispatch(removeFromBookmark(sendRequest, postData));
+  //   }
+  // };
 
   const [userData, setUserData] = useState({});
   useEffect(() => {
@@ -114,12 +115,12 @@ function TweetCard(props) {
             </div>
           </Link>
 
-          <div className={styles["tweet-action-item-cont"]}>
+          {/* <div className={styles["tweet-action-item-cont"]}>
             <BookmarkBorderIcon
               onClick={bookmarkHandler}
               className={isPostBookmarked ? styles["postBookmarked"] : ""}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

@@ -5,11 +5,11 @@ import useFetch from "../../custom-hooks/fetch-hook";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
-import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
+// import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import { useDispatch } from "react-redux";
 import Comment from "./Comment/Comment";
-import { addToBookmark, removeFromBookmark } from "../../Store/BookmarkAction";
+// import { addToBookmark, removeFromBookmark } from "../../Store/BookmarkAction";
 import { addCommentHandler, likeTweetHandler } from "../../Store/PostAction";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import NewTweetContainer from "../NewTweet/NewTweetContainer";
@@ -30,9 +30,9 @@ function TweetDetail() {
   const [postData, setPostData] = useState();
   const [editBtnVisible, setEditBtnVisibility] = useState(false);
   const [editModalVisible, setEditModalVisibility] = useState(false);
-  const bookmarkData = useSelector(
-    (state) => state.BookmarkSliceReducer.bookmarkData
-  );
+  // const bookmarkData = useSelector(
+  //   (state) => state.BookmarkSliceReducer.bookmarkData
+  // );
   const [userData, setUserData] = useState({});
 
   useEffect(() => {
@@ -70,16 +70,16 @@ function TweetDetail() {
     inputRef.current.value = "";
   };
 
-  const isPostBookmarked = bookmarkData.find(
-    (item) => item["_id"] === postData["_id"]
-  );
-  const bookmarkHandler = async () => {
-    if (!isPostBookmarked) {
-      dispatch(addToBookmark(sendRequest, postData));
-    } else {
-      dispatch(removeFromBookmark(sendRequest, postData));
-    }
-  };
+  // const isPostBookmarked = bookmarkData.find(
+  //   (item) => item["_id"] === postData["_id"]
+  // );
+  // const bookmarkHandler = async () => {
+  //   if (!isPostBookmarked) {
+  //     dispatch(addToBookmark(sendRequest, postData));
+  //   } else {
+  //     dispatch(removeFromBookmark(sendRequest, postData));
+  //   }
+  // };
 
   const editPostHandler = () => {
     setEditModalVisibility(!editModalVisible);
@@ -179,12 +179,12 @@ function TweetDetail() {
                 <div>{postData?.length}</div>
               </div>
 
-              <div className={styles["tweet-action-item-cont"]}>
+              {/* <div className={styles["tweet-action-item-cont"]}>
                 <BookmarkBorderIcon
                   onClick={bookmarkHandler}
                   className={isPostBookmarked ? styles["postBookmarked"] : ""}
                 />
-              </div>
+              </div> */}
             </div>
 
             <div className={styles["comment-container"]}>
