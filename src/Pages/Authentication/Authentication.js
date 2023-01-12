@@ -152,7 +152,7 @@ function Authentication() {
     resetAuthForm();
   };
 
-  // console.log(process.env.REACT_APP_JWT_SECRET);
+  console.log(process.env.REACT_APP_JWT_SECRET);
 
   return (
     <div className={styles["auth-page"]}>
