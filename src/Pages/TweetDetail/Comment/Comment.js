@@ -43,8 +43,23 @@ function Comment(props) {
     }
   };
 
+  const deleteCommentHandler = async () => {
+    const responseData = await sendRequest({
+      url: `/api/comments/delete/${tweetId}/${commentData["_id"]}`,
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        authorization: token,
+      },
+    });
+    // console.log(responseData);
+    if (responseData) {
+      dispatch(PostSliceAction.setPostData({ allPost: responseData.posts }));
+    }
+  };
+
   const noOfLikes = commentData?.votes?.upvotedBy?.length;
-  console.log(commentData);
+  // console.log(commentData);
 
   return (
     <div className={styles["comment"]}>
@@ -79,7 +94,7 @@ function Comment(props) {
               />
               <div>{noOfLikes}</div>
             </div>
-            <div>Delete</div>
+            <div onClick={deleteCommentHandler}>Delete</div>
           </div>
         </div>
       </div>
