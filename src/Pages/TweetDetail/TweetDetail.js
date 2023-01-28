@@ -50,7 +50,7 @@ function TweetDetail() {
       const responseUser = await sendRequest({
         url: `/api/users/${response?.post.userId}`,
       });
-      console.log(responseUser);
+      // console.log(responseUser);
       setUserData(responseUser.user);
       setPostData(response?.post);
     })();

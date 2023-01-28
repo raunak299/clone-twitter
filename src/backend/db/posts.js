@@ -131,8 +131,8 @@ export const posts = [
       "https://res.cloudinary.com/ducugiwdi/image/upload/v1672509808/profile3_uflm4z.jpg",
     userId: "asassdafdgdk",
     username: "raunakraj299@gmail.com",
-    createdAt: "2023-01-01T15:06:14+05:30",
-    updatedAt: "2023-01-01T15:09:33+05:30",
+    createdAt: "2023-01-08T15:06:14+05:30",
+    updatedAt: "2023-01-08T15:09:33+05:30",
     id: "1",
   },
   {
@@ -211,8 +211,8 @@ export const posts = [
           ],
           downvotedBy: [],
         },
-        createdAt: "2023-01-01T15:08:12+05:30",
-        updatedAt: "2023-01-01T15:08:12+05:30",
+        createdAt: "2023-01-07T15:08:12+05:30",
+        updatedAt: "2023-01-07T15:08:12+05:30",
       },
       {
         _id: "3ad6f8e0-604f-40f9-8c25-1450df13ca0c",
@@ -244,8 +244,8 @@ export const posts = [
       "https://res.cloudinary.com/ducugiwdi/image/upload/v1672509808/profile3_uflm4z.jpg",
     userId: "asassdafdgdk",
     username: "raunakraj299@gmail.com",
-    createdAt: "2023-01-01T15:06:54+05:30",
-    updatedAt: "2023-01-01T15:10:08+05:30",
+    createdAt: "2023-01-07T15:06:54+05:30",
+    updatedAt: "2023-01-07T15:10:08+05:30",
     id: "2",
   },
 
@@ -263,8 +263,8 @@ export const posts = [
       "https://res.cloudinary.com/ducugiwdi/image/upload/v1672564959/profile5_olcnqw.jpg",
     userId: "d04df361-b79d-4e71-a6a1-b70a9f9987cb",
     username: "akarshitak@gmail.com",
-    createdAt: "2023-01-07T18:44:49+05:30",
-    updatedAt: "2023-01-07T18:44:49+05:30",
+    createdAt: "2023-01-01T18:44:49+05:30",
+    updatedAt: "2023-01-01T18:44:49+05:30",
     id: "3",
   },
 ];

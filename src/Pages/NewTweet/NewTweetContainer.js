@@ -19,7 +19,7 @@ function NewTweetContainer(props) {
   const [tweetImg, setTweetImg] = useState("");
   const [choosenEmoji, setChosenEmoji] = useState(null);
   const { sendRequest } = useFetch();
-  console.log(choosenEmoji);
+  // console.log(choosenEmoji);
 
   const userId = localStorage.getItem("userId");
 

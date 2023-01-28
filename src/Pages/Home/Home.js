@@ -39,9 +39,9 @@ const Home = () => {
           </div>
         )}
         {!loading &&
-          postData?.map((data, index) => (
-            <TweetCard postData={data} key={index} />
-          ))}
+          [...postData]
+            .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+            .map((data, index) => <TweetCard postData={data} key={index} />)}
       </div>
     </Layout>
   );

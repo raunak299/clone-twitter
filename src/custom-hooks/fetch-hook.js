@@ -5,7 +5,7 @@ const useFetch = () => {
   const [error, setError] = useState("");
 
   const sendRequest = useCallback(async (requestConfig) => {
-    console.log(requestConfig);
+    // console.log(requestConfig);
     try {
       const response = await fetch(requestConfig.url, {
         method: requestConfig.method ? requestConfig.method : "GET",
@@ -20,7 +20,7 @@ const useFetch = () => {
         throw new Error(errors[0]);
       }
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       return data;
     } catch (error) {
       toast.error(error.message, {
