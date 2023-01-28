@@ -17,9 +17,7 @@ function NewTweetContainer(props) {
   const { postData, setEditModalVisibility, setEditBtnVisibility } = props;
   const textareaRef = useRef();
   const [tweetImg, setTweetImg] = useState("");
-  const [choosenEmoji, setChosenEmoji] = useState(null);
   const { sendRequest } = useFetch();
-  // console.log(choosenEmoji);
 
   const userId = localStorage.getItem("userId");
 
@@ -42,7 +40,6 @@ function NewTweetContainer(props) {
   }, [sendRequest, userId]);
 
   const selectEmojiHandler = (emoji) => {
-    setChosenEmoji(emoji);
     textareaRef.current.value += emoji;
   };
 
